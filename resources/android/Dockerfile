@@ -9,7 +9,7 @@ ENV ANDROID_SDK_ROOT "/opt/sdk"
 ENV PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
 
 # Install required dependencies
-RUN apk add --no-cache bash git unzip wget && \
+RUN apk add --no-cache bash git unzip wget openssh vim && \
     apk add --virtual .rundeps $runDeps && \
     rm -rf /tmp/* && \
     rm -rf /var/cache/apk/*
